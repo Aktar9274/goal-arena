@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>গোল অ্যারেনা</title>
+<link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);--bg:#0b1020;--card:#151b30;--tx:#eef2ff;--mu:#9aa6c4;--ac:#22d37a;--ac2:#00b8d9;--bd:#27304d;--ok:#22d37a}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0b1020;--card:#151b30;--tx:#eef2ff;--mu:#9aa6c4;--ac:#22d37a;--ac2:#00b8d9;--bd:#27304d;--ok:#22d37a}}
+:root[data-theme="dark"]{--bg:#0b1020;--card:#151b30;--tx:#eef2ff;--mu:#9aa6c4;--ac:#22d37a;--ac2:#00b8d9;--bd:#27304d;--ok:#22d37a}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--tx);font-family:'Hind Siliguri',system-ui,sans-serif;font-size:16px}
+header{position:relative;padding:20px 58px 16px;text-align:center;background:#8f1d1d;color:#fff}
+header h1{margin:0;font-size:24px;font-weight:700;line-height:1.25}header p{margin:4px 0 0;opacity:.9;font-size:14px}.dl,.dr{position:absolute;top:50%;transform:translateY(-50%);display:flex;flex-direction:column;align-items:center;gap:8px;font-size:30px;line-height:1.1}.dl{left:8px}.dr{right:8px}.dl svg,.dr svg{width:32px;height:32px;stroke:#ffd54a;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+nav{display:flex;gap:6px;padding:10px 12px;position:sticky;top:env(safe-area-inset-top,0px);background:var(--bg);z-index:5}
+nav button{flex:1;padding:10px 4px;border:1px solid var(--bd);background:var(--card);color:var(--tx);border-radius:10px;font:inherit;font-weight:600;cursor:pointer}
+nav button.on{background:var(--ac);color:#04210f;border-color:var(--ac)}
+main{padding:4px 12px 40px;max-width:720px;margin:0 auto}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:14px;padding:14px;margin-bottom:12px}
+h2{font-size:17px;margin:0 0 10px}
+input,select{width:100%;padding:11px;margin-bottom:8px;border:1px solid var(--bd);border-radius:10px;background:var(--bg);color:var(--tx);font:inherit}
+.btn{padding:10px 14px;border:0;border-radius:10px;background:var(--ac);color:#04210f;font:inherit;font-weight:600;cursor:pointer}
+.btn.s{padding:6px 10px;font-size:14px}.btn.g{background:var(--ok)}.btn.r{background:#ff4d6d;color:#fff}.btn.o{background:transparent;color:var(--tx);border:1px solid var(--bd)}
+.row{display:flex;justify-content:space-between;align-items:center;gap:8px;padding:8px 0;border-bottom:1px solid var(--bd)}
+.row:last-child{border:0}.mu{color:var(--mu);font-size:14px}
+.sc{overflow-x:auto}table{width:100%;border-collapse:collapse}th,td{padding:9px 6px;text-align:center;border-bottom:1px solid var(--bd)}td:nth-child(2),th:nth-child(2){text-align:left}
+th{color:var(--mu);font-size:13px}.top td{font-weight:700;color:var(--ac)}
+.br{display:flex;gap:14px;overflow-x:auto;padding-bottom:6px}.col{min-width:150px;display:flex;flex-direction:column;justify-content:space-around;gap:10px}
+.col h3{margin:0;font-size:13px;color:var(--mu);text-align:center}
+.m{border:1px solid var(--bd);border-radius:10px;overflow:hidden;background:var(--card)}
+.m div{padding:8px 10px;font-size:14px;border-bottom:1px solid var(--bd)}.m div:last-child{border:0}
+.m .w{background:var(--ac);color:#04210f;font-weight:700}.m .cl{cursor:pointer}.m .e{color:var(--mu)}
+.champ{text-align:center;font-size:20px;font-weight:700;padding:10px;color:var(--ac)}
+.tag{font-size:12px;padding:2px 8px;border-radius:99px;background:var(--bd);color:var(--mu)}.tag.ok{background:var(--ok);color:#04210f}
+</style>
+</head>
+<body>
+<header><div class="dl"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 21h8"/><path d="M12 17v4"/><path d="M7 4h10"/><path d="M17 4v8a5 5 0 0 1 -10 0v-8"/><circle cx="5" cy="9" r="2"/><circle cx="19" cy="9" r="2"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z"/></svg></div><h1 id="ttl"></h1><p id="sub"></p><div class="dr"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7l4.76 3.45l-1.76 5.55h-6l-1.76 -5.55z"/><path d="M12 7v-4m3 13l2.5 3m-.74 -8.55l3.74 -1.45m-11.44 7.05l-2.56 2.95m.74 -8.55l-3.74 -1.45"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 12c2 -2.96 0 -7 -1 -8c0 3.038 -1.773 4.741 -3 6c-1.226 1.26 -2 3.24 -2 5a6 6 0 1 0 12 0c0 -1.532 -1.056 -3.94 -2 -5c-1.786 3 -2.791 3 -4 2z"/></svg></div></header>
+<nav id="nav"></nav>
+<main id="app"></main>
+<script>
+const KEY='tourney_v1';
+const SCORE={'Free Fire':[12,9,8,7,6,5,4,3,2,1,0,0],'PUBG':[15,12,10,8,6,4,2,1,0,0,0,0]};
+let S={game:'eFootball',name:'গোল অ্যারেনা',pin:'1234',fee:'',bk:'',ng:'',open:true,showPh:true,wa:'',regs:[],bracket:null,pts:[]};
+try{const x=localStorage.getItem(KEY);if(x)S=Object.assign(S,JSON.parse(x))}catch(e){}
+try{if(!S.adm&&location.hash.indexOf('#d=')===0){const d=JSON.parse(decodeURIComponent(escape(atob(location.hash.slice(3)))));['name','fee','bk','ng','wa','open','showPh','bracket'].forEach(k=>{if(d[k]!==undefined)S[k]=d[k]});const ids=new Set((d.regs||[]).map(r=>r.id));S.regs=S.regs.filter(r=>!r.ok&&!ids.has(r.id)).concat(d.regs||[]);try{localStorage.setItem(KEY,JSON.stringify(S))}catch(e){}}}catch(e){}
+S.game='eFootball';if(!S.name||S.name==='লোকাল গেমিং টুর্নামেন্ট'||S.name==='eFootball টুর্নামেন্ট')S.name='গোল অ্যারেনা';let admin=false,tab='reg',payId=null;
+const $=id=>document.getElementById(id);
+const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const isBr=()=>true;
+const approved=()=>S.regs.filter(r=>r.ok).map(r=>r.name);
+function save(){try{localStorage.setItem(KEY,JSON.stringify(S))}catch(e){}}
+function go(t){tab=t;render()}
+function shuffle(a){a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a}
+
+/* bracket logic */
+function parts(r,i){const B=S.bracket;if(r===0)return[B.seed[2*i],B.seed[2*i+1]];return[win(r-1,2*i),win(r-1,2*i+1)]}
+function win(r,i){const p=parts(r,i);if(r===0&&p[0]&&!p[1])return p[0];const w=S.bracket.w[r+'-'+i];return w&&p.includes(w)?w:null}
+function genBracket(){const t=shuffle(approved());if(t.length<2){alert('কমপক্ষে ২ জন অনুমোদিত প্লেয়ার লাগবে');return}
+ if(S.bracket&&!confirm('নতুন ম্যাচ তালিকা বানালে আগেরটি মুছে যাবে। ঠিক আছে?'))return;
+ let size=2;while(size<t.length)size*=2;const h=size/2,seed=[];
+ for(let i=0;i<h;i++){seed.push(t[i]);seed.push(t[h+i]||null)}
+ S.bracket={seed,w:{}};save();render()}
+function msg(p,c){return `eFootball ম্যাচ: ${p[0]} vs ${p[1]}\nরুম কোড: ${c}\nরুমে ঢুকে এখনই খেলুন।`}
+function rc(r,i,p){if(!p[0]||!p[1])return'';const c=((S.bracket.rc||{})[r+'-'+i]);let h='';
+ if(c&&!admin)h+=`<div style="background:var(--bg)">🔑 রুম কোড: <b>${esc(c)}</b></div>`;
+ if(admin)h+=`<div style="background:var(--bg);display:flex;gap:6px;align-items:center"><input id="mc${r}-${i}" value="${esc(c||'')}" placeholder="রুম কোড" oninput="setRc(${r},${i})" style="margin:0;padding:6px 8px;flex:1;min-width:0"><a id="ms${r}-${i}" class="btn s g" style="text-decoration:none" target="_blank" rel="noopener" href="${mHref(p,c)}">শেয়ার</a></div>`;
+ return h}
+function mHref(p,c){return 'https://wa.me/?text='+encodeURIComponent(msg(p,c||''))}
+function setRc(r,i){const k=r+'-'+i,v=$('mc'+k).value.trim();S.bracket.rc=S.bracket.rc||{};S.bracket.rc[k]=v||undefined;save();$('ms'+k).href=mHref(parts(r,i),v)}
+function vPay(){const r=S.regs.find(x=>x.id===payId);if(!r){tab='reg';return vReg()}
+ const num=(l,v)=>v?`<div class="row"><span>${l}</span><b style="font-size:18px">${esc(v)}</b></div>`:'';
+ return `<div class="card"><h2>পেমেন্ট করুন</h2><p>ধন্যবাদ, <b>${esc(r.name)}</b>! নিচের নম্বরে এন্ট্রি ফি পাঠান, তারপর ট্রান্সজেকশন আইডি দিন।</p>${S.fee?`<div class="row"><span>এন্ট্রি ফি</span><b style="font-size:18px">৳ ${esc(S.fee)}</b></div>`:''}${num('বিকাশ নম্বর',S.bk)}${num('নগদ নম্বর',S.ng)}${S.bk||S.ng?'':'<p class="mu">অ্যাডমিন এখনো পেমেন্ট নম্বর দেননি।</p>'}<input id="tx" oninput="payUp()" placeholder="ট্রান্সজেকশন আইডি (TrxID)" value="${esc(r.trx||'')}"><a id="pa" class="btn" style="text-decoration:none;display:inline-block" target="_blank" rel="noopener" href="${payHref(r)}" onclick="return saveTrx()">পেমেন্ট করেছি, অ্যাডমিনকে জানান</a></div><p class="mu" style="text-align:center">অ্যাডমিন যাচাই করে অনুমোদন দিলে আপনার নামের পাশে ✅ আসবে, তারপর রুম কোড পাবেন।</p>`}
+function tg(k){S[k]=!S[k];save();render()}
+function addMan(){const n=$('mn').value.trim(),u=$('mu').value.trim(),p=$('mp').value.trim();if(!n||!u){alert('নাম ও আইডি দিন');return}if(S.regs.some(r=>r.name.toLowerCase()===n.toLowerCase())){alert('এই নামে আগেই আছে');return}S.regs.push({id:Date.now(),name:n,uid:u,phone:p,ok:true});save();render()}
+function delBr(){if(confirm('ম্যাচ তালিকা মুছে ফেলবেন?')){S.bracket=null;save();render()}}
+function helpBox(){if(!S.wa)return '';return `<div class="card"><h2>💬 কাস্টমার সার্ভিস</h2><p class="mu">কোনো সমস্যা হলে এখানে লিখুন, মেসেজ হোয়াটসঅ্যাপে সরাসরি অ্যাডমিনের কাছে যাবে।</p><textarea id="hm" oninput="hlUp()" rows="3" placeholder="আপনার সমস্যা লিখুন" style="width:100%;padding:11px;margin-bottom:8px;border:1px solid var(--bd);border-radius:10px;background:var(--bg);color:var(--tx);font:inherit"></textarea><a id="hl" class="btn" style="text-decoration:none;display:inline-block" target="_blank" rel="noopener" href="${hlHref('')}">হোয়াটসঅ্যাপে পাঠান</a></div>`}
+function waLink(r){const t=`হ্যালো ${r.name}! আপনার eFootball ম্যাচের রুম কোড: ${r.rc||''}\nএখনই রুমে ঢুকে খেলুন।`;return 'https://wa.me/'+waNum(r.phone)+'?text='+encodeURIComponent(t)}
+function rcUp(id){const r=S.regs.find(x=>x.id===id);r.rc=$('rc'+id).value.trim();save();$('ra'+id).href=waLink(r)}
+function hlHref(m){return 'https://wa.me/'+waNum(S.wa)+'?text='+encodeURIComponent('গোল অ্যারেনা - সাহায্য:\n'+m)}
+function hlUp(){$('hl').href=hlHref($('hm').value.trim())}
+function payMsg(r){return 'গোল অ্যারেনা - নতুন রেজিস্ট্রেশন\nনাম: '+r.name+'\nআইডি: '+r.uid+'\nনম্বর: '+r.phone+'\nTrxID: '+(r.trx||'')}
+function payHref(r){return S.wa?'https://wa.me/'+waNum(S.wa)+'?text='+encodeURIComponent(payMsg(r)):'#'}
+function payUp(){const r=S.regs.find(x=>x.id===payId);r.trx=$('tx').value.trim();save();$('pa').href=payHref(r)}
+function saveTrx(){const r=S.regs.find(x=>x.id===payId);r.trx=$('tx').value.trim();save();if(!S.wa){alert('অ্যাডমিনের হোয়াটসঅ্যাপ নম্বর পাওয়া যায়নি। অ্যাডমিনকে সরাসরি জানান।');return false}setTimeout(()=>go('reg'),400);return true}
+function shareLink(){const d={name:S.name,fee:S.fee,bk:S.bk,ng:S.ng,wa:S.wa,open:S.open,showPh:S.showPh,regs:S.regs.filter(r=>r.ok).map(r=>({id:r.id,name:r.name,uid:r.uid,phone:S.showPh?r.phone:'',ok:true})),bracket:S.bracket};return location.href.split('#')[0]+'#d='+btoa(unescape(encodeURIComponent(JSON.stringify(d))))}
+function cpLink(){const v=$('lk').value;try{navigator.clipboard.writeText(v).then(()=>alert('লিংক কপি হয়েছে'),()=>{$('lk').select()})}catch(e){$('lk').select()}}
+function pasteAdd(){const t=$('pm').value;const g=k=>{const m=t.match(new RegExp(k+'\\s*[:：]\\s*([^\\n]+)'));return m?m[1].trim():''};const n=g('নাম'),u=g('আইডি'),p=g('নম্বর'),x=g('TrxID');if(!n||!u){alert('মেসেজে নাম ও আইডি পাওয়া যায়নি');return}if(S.regs.some(r=>r.name.toLowerCase()===n.toLowerCase())){alert('এই নামে আগেই আছে');return}S.regs.push({id:Date.now(),name:n,uid:u,phone:p,trx:x,ok:false});save();render()}
+function waNum(p){p=String(p).replace(/\D/g,'');if(p.startsWith('880'))return p;if(p.startsWith('0'))return '88'+p;if(p.length===10&&p[0]==='1')return '880'+p;return p}
+function setW(r,i,s){const n=parts(r,i)[s];if(!n)return;const k=r+'-'+i;S.bracket.w[k]=S.bracket.w[k]===n?undefined:n;save();render()}
+
+/* registration */
+function addReg(){const n=$('rn').value.trim(),u=$('ru').value.trim(),p=$('rp').value.trim();
+ if(!n||!u||!p){alert('নাম, গেম আইডি ও হোয়াটসঅ্যাপ নম্বর দিন');return}
+ if(S.regs.some(r=>r.name.toLowerCase()===n.toLowerCase())){alert('এই নামে আগেই রেজিস্ট্রেশন হয়েছে');return}
+ const id=Date.now();S.regs.push({id,name:n,uid:u,phone:p,ok:false});save();payId=id;tab='pay';render()}
+function appr(id){const r=S.regs.find(x=>x.id===id);r.ok=!r.ok;save();render()}
+function delReg(id){if(!confirm('মুছে ফেলবেন?'))return;S.regs=S.regs.filter(x=>x.id!==id);save();render()}
+
+/* points */
+function addPts(){const t=$('pt').value,p=+$('pp').value,k=+$('pk').value||0;
+ if(!t||!p||p<1){alert('টিম ও পজিশন দিন');return}
+ const sc=(SCORE[S.game][p-1]||0)+k;S.pts.push({id:Date.now(),team:t,place:p,kills:k,pts:sc,m:+$('pm').value||1});save();render()}
+function delPts(id){S.pts=S.pts.filter(x=>x.id!==id);save();render()}
+function standings(){const o={};S.pts.forEach(x=>{const e=o[x.team]=o[x.team]||{team:x.team,pts:0,kills:0,ms:new Set()};e.pts+=x.pts;e.kills+=x.kills;e.ms.add(x.m)});
+ return Object.values(o).sort((a,b)=>b.pts-a.pts||b.kills-a.kills)}
+
+/* admin */
+function login(){if($('pin').value===S.pin){admin=true;S.adm=true;save();render()}else alert('ভুল পিন')}
+function setMeta(){S.name=$('an').value.trim()||S.name;S.fee=$('af').value.trim();S.bk=$('ab').value.trim();S.ng=$('anm').value.trim();S.wa=$('aw').value.trim();save();render()}
+function chPin(){const p=$('np').value.trim();if(p.length<4){alert('কমপক্ষে ৪ অক্ষর');return}S.pin=p;save();alert('পিন বদলানো হয়েছে')}
+function resetAll(){if(confirm('সব ডেটা (রেজিস্ট্রেশন, ফলাফল) মুছে যাবে!')){S.regs=[];S.pts=[];S.bracket=null;save();render()}}
+
+function vReg(){const ok=S.regs.filter(r=>r.ok);
+ return `${S.open?'':'<div class="card"><h2>রেজিস্ট্রেশন বন্ধ</h2><p class="mu">এই মুহূর্তে নতুন রেজিস্ট্রেশন বন্ধ আছে।</p></div>'}<div class="card" ${S.open?'':'hidden'}><h2>রেজিস্ট্রেশন</h2><input id="rn" placeholder="প্লেয়ারের নাম"><input id="ru" placeholder="eFootball ইউজার আইডি"><input id="rp" type="tel" placeholder="হোয়াটসঅ্যাপ নম্বর"><button class="btn" onclick="addReg()">জমা দিন</button></div>
+ <div class="card"><h2>অনুমোদিত তালিকা (${ok.length})</h2>${ok.length?ok.map((r,i)=>`<div class="row"><span>${i+1}. <b>${esc(r.name)}</b> · ${esc(r.uid)}${S.showPh||admin?' · '+esc(r.phone):''}</span><span style="font-size:20px">✅</span></div>`).join(''):'<p class="mu">এখনো কেউ অনুমোদিত হয়নি</p>'}</div>`}
+
+function vMain(){return `<div class="card" style="text-align:center"><div style="font-size:40px">⚽</div><a class="btn" style="display:inline-block;text-decoration:none;margin-top:6px" href="https://play.google.com/store/apps/details?id=jp.konami.pesam" target="_blank" rel="noopener">eFootball খুলে ম্যাচ খেলুন</a><p class="mu">Play Store খুলবে, সেখানে Open চাপলে eFootball চালু হবে। ম্যাচ শেষে ফলাফল অ্যাডমিনকে জানান।</p></div>`+vBr()}
+function vBr(){const B=S.bracket;if(!B)return '<div class="card"><p class="mu">ম্যাচ তালিকা এখনো তৈরি হয়নি।</p></div>';
+ const R=Math.log2(B.seed.length);let h='<div class="card"><div class="br">';
+ for(let r=0;r<R;r++){const n=B.seed.length/Math.pow(2,r+1);h+=`<div class="col"><h3>${r===R-1?'ফাইনাল':'রাউন্ড '+(r+1)}</h3>`;
+  for(let i=0;i<n;i++){const p=parts(r,i),w=win(r,i);h+='<div class="m">';
+   for(let s=0;s<2;s++){const bye=r===0&&s===1&&!p[1];const can=admin&&p[s]&&!bye;
+    h+=`<div class="${w&&w===p[s]?'w':''} ${can?'cl':''} ${p[s]?'':'e'}" ${can?`onclick="setW(${r},${i},${s})"`:''}>${p[s]?esc(p[s]):(bye?'বাই':'—')}</div>`}
+   h+=rc(r,i,p)+'</div>'}h+='</div>'}
+ const c=win(R-1,0);return h+`</div>${admin?'<p class="mu">অ্যাডমিন: বিজয়ীর নামে ট্যাপ করুন</p>':''}${c?`<div class="champ">🏆 চ্যাম্পিয়ন: ${esc(c)}</div>`:''}</div>`}
+function vPts(){const st=standings();const sc=SCORE[S.game];
+ return `<div class="card"><h2>পয়েন্ট টেবিল — ${S.game}</h2>${st.length?`<div class="sc"><table><tr><th>#</th><th>টিম</th><th>ম্যাচ</th><th>কিল</th><th>পয়েন্ট</th></tr>${st.map((e,i)=>`<tr class="${i<3?'top':''}"><td>${i+1}</td><td>${esc(e.team)}</td><td>${e.ms.size}</td><td>${e.kills}</td><td>${e.pts}</td></tr>`).join('')}</table></div>`:'<p class="mu">এখনো কোনো ফলাফল নেই</p>'}
+ <p class="mu">পয়েন্ট = পজিশন পয়েন্ট (১ম ${sc[0]}, ২য় ${sc[1]}, ৩য় ${sc[2]}…) + প্রতি কিলে ১</p></div>`}
+
+function vAdmin(){
+ if(!admin)return `<div class="card"><h2>অ্যাডমিন লগইন</h2><input id="pin" type="password" placeholder="পিন" onkeydown="if(event.key==='Enter')login()"><button class="btn" onclick="login()">প্রবেশ</button><p class="mu">ডিফল্ট পিন: 1234 (ঢুকে বদলে নিন)</p></div>`;
+ const teams=approved();
+ let h=`<div class="card"><h2>সেটিংস</h2><input id="an" value="${esc(S.name)}" placeholder="টুর্নামেন্টের নাম"><input id="af" value="${esc(S.fee)}" placeholder="এন্ট্রি ফি (টাকা)" inputmode="numeric"><input id="ab" value="${esc(S.bk)}" placeholder="আপনার বিকাশ নম্বর" inputmode="tel"><input id="anm" value="${esc(S.ng)}" placeholder="আপনার নগদ নম্বর" inputmode="tel"><input id="aw" value="${esc(S.wa)}" placeholder="সাহায্যের জন্য হোয়াটসঅ্যাপ নম্বর" inputmode="tel"><button class="btn" onclick="setMeta()">সংরক্ষণ</button> <button class="btn o" onclick="tg('open')">${S.open?'রেজিস্ট্রেশন বন্ধ করুন':'রেজিস্ট্রেশন চালু করুন'}</button> <button class="btn o" style="margin-top:8px" onclick="tg('showPh')">${S.showPh?'তালিকায় নম্বর লুকান':'তালিকায় নম্বর দেখান'}</button></div>
+ <div class="card"><h2>প্লেয়ারদের জন্য লিংক</h2><p class="mu">সেটিংস, অনুমোদিত প্লেয়ার বা ম্যাচ তালিকা বদলালে নতুন লিংক গ্রুপে দিন। প্লেয়াররা নতুন লিংক খুললে হালনাগাদ তথ্য দেখবে।</p><input id="lk" readonly value="${esc(shareLink())}"><a class="btn" style="text-decoration:none;display:inline-block" target="_blank" rel="noopener" href="https://wa.me/?text=${encodeURIComponent(shareLink())}">হোয়াটসঅ্যাপে পাঠান</a> <button class="btn o" onclick="cpLink()">কপি</button></div><div class="card"><h2>হিসাব</h2><div class="row"><span>অনুমোদিত প্লেয়ার</span><b>${teams.length} জন</b></div><div class="row"><span>মোট সংগৃহীত</span><b>৳ ${(+S.fee||0)*teams.length}</b></div></div><div class="card"><h2>প্লেয়ার যোগ করুন</h2><input id="mn" placeholder="নাম"><input id="mu" placeholder="eFootball আইডি"><input id="mp" type="tel" placeholder="হোয়াটসঅ্যাপ নম্বর"><button class="btn" onclick="addMan()">যোগ ও অনুমোদন</button></div><div class="card"><h2>মেসেজ থেকে যোগ করুন</h2><p class="mu">প্লেয়ারের পাঠানো রেজিস্ট্রেশন মেসেজ এখানে পেস্ট করুন। অপেক্ষমাণ তালিকায় যোগ হবে, যাচাই করে অনুমোদন দিন।</p><textarea id="pm" rows="4" placeholder="মেসেজ পেস্ট করুন" style="width:100%;padding:11px;margin-bottom:8px;border:1px solid var(--bd);border-radius:10px;background:var(--bg);color:var(--tx);font:inherit"></textarea><button class="btn" onclick="pasteAdd()">মেসেজ থেকে যোগ করুন</button></div><div class="card"><h2>রেজিস্ট্রেশন (${S.regs.length})</h2>${S.regs.length?S.regs.map(r=>`<div class="row"><div><b>${esc(r.name)}</b> <span class="tag ${r.ok?'ok':''}">${r.ok?'অনুমোদিত':'অপেক্ষমাণ'}</span><div class="mu">${esc(r.uid)} · ${esc(r.phone)}${r.trx?' · TrxID: '+esc(r.trx):' · TrxID নেই'}</div>${r.ok?`<div style="margin-top:6px;display:flex;gap:6px;align-items:center"><input id="rc${r.id}" value="${esc(r.rc||'')}" placeholder="রুম কোড" oninput="rcUp(${r.id})" style="width:110px;margin:0;padding:8px"><a id="ra${r.id}" class="btn s" style="text-decoration:none" target="_blank" rel="noopener" href="${waLink(r)}">🔑 পাঠান</a></div>`:''}</div><div><button class="btn s ${r.ok?'o':'g'}" onclick="appr(${r.id})">${r.ok?'বাতিল':'অনুমোদন'}</button> <button class="btn s r" onclick="delReg(${r.id})">✕</button></div></div>`).join(''):'<p class="mu">কেউ রেজিস্ট্রেশন করেনি</p>'}</div>`;
+ if(isBr())h+=`<div class="card"><h2>ম্যাচ তালিকা</h2><button class="btn" onclick="genBracket()">ম্যাচ তালিকা তৈরি করুন (${teams.length} জন)</button>${S.bracket?' <button class="btn r" onclick="delBr()">ম্যাচ তালিকা মুছুন</button>':''}<p class="mu">তৈরির পর "ম্যাচ তালিকা" ট্যাবে বিজয়ীর নামে ট্যাপ করুন।</p></div>`;
+ else h+=`<div class="card"><h2>ম্যাচের ফলাফল যোগ</h2><select id="pt">${teams.map(t=>`<option>${esc(t)}</option>`).join('')}</select><input id="pm" type="number" min="1" placeholder="ম্যাচ নম্বর (১, ২, ৩…)"><input id="pp" type="number" min="1" max="12" placeholder="পজিশন (১–১২)"><input id="pk" type="number" min="0" placeholder="কিল"><button class="btn" onclick="addPts()">যোগ করুন</button>
+ ${S.pts.slice().reverse().map(x=>`<div class="row"><span>ম্যাচ ${x.m} · ${esc(x.team)} · #${x.place} · ${x.kills} কিল = <b>${x.pts}</b></span><button class="btn s r" onclick="delPts(${x.id})">✕</button></div>`).join('')}</div>`;
+ return h+`<div class="card"><h2>নিরাপত্তা</h2><input id="np" placeholder="নতুন পিন"><button class="btn o" onclick="chPin()">পিন বদলান</button> <button class="btn r" onclick="resetAll()">সব মুছুন</button> <button class="btn o" onclick="admin=false;render()">লগআউট</button></div>`}
+
+function render(){
+ $('ttl').textContent='⚽ '+S.name+' ⚽';$('sub').textContent='eFootball · নক-আউট';
+ $('nav').innerHTML=[['reg','রেজিস্ট্রেশন'],['main','ম্যাচ তালিকা'],['adm','অ্যাডমিন']].map(([k,l])=>`<button class="${tab===k||(k==='reg'&&tab==='pay')?'on':''}" onclick="go('${k}')">${l}</button>`).join('');
+ $('app').innerHTML=(tab==='reg'?vReg():tab==='pay'?vPay():tab==='main'?vMain():vAdmin())+(tab==='main'?helpBox():'')}
+render();
+</script>
+</body>
+</html>
