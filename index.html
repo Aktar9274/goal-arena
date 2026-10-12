@@ -42,10 +42,12 @@ th{color:var(--mu);font-size:13px}.top td{font-weight:700;color:var(--ac)}
 <main id="app"></main>
 <script>
 const KEY='tourney_v1';
+const ADMIN_BUILD=false;
+const SITE='https://aktar9274.github.io/goal-arena/';
 const SCORE={'Free Fire':[12,9,8,7,6,5,4,3,2,1,0,0],'PUBG':[15,12,10,8,6,4,2,1,0,0,0,0]};
 let S={game:'eFootball',name:'গোল অ্যারেনা',pin:'1234',fee:'',bk:'',ng:'',open:true,showPh:true,wa:'',regs:[],bracket:null,pts:[]};
 try{const x=localStorage.getItem(KEY);if(x)S=Object.assign(S,JSON.parse(x))}catch(e){}
-try{if(!S.adm&&location.hash.indexOf('#d=')===0){const d=JSON.parse(decodeURIComponent(escape(atob(location.hash.slice(3)))));['name','fee','bk','ng','wa','open','showPh','bracket'].forEach(k=>{if(d[k]!==undefined)S[k]=d[k]});const ids=new Set((d.regs||[]).map(r=>r.id));S.regs=S.regs.filter(r=>!r.ok&&!ids.has(r.id)).concat(d.regs||[]);try{localStorage.setItem(KEY,JSON.stringify(S))}catch(e){}}}catch(e){}
+try{if(!ADMIN_BUILD&&location.hash.indexOf('#d=')===0){const d=JSON.parse(decodeURIComponent(escape(atob(location.hash.slice(3)))));['name','fee','bk','ng','wa','open','showPh','bracket'].forEach(k=>{if(d[k]!==undefined)S[k]=d[k]});const ids=new Set((d.regs||[]).map(r=>r.id));S.regs=S.regs.filter(r=>!r.ok&&!ids.has(r.id)).concat(d.regs||[]);try{localStorage.setItem(KEY,JSON.stringify(S))}catch(e){}}}catch(e){}
 S.game='eFootball';if(!S.name||S.name==='লোকাল গেমিং টুর্নামেন্ট'||S.name==='eFootball টুর্নামেন্ট')S.name='গোল অ্যারেনা';let admin=false,tab='reg',payId=null;
 const $=id=>document.getElementById(id);
 const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
@@ -85,7 +87,7 @@ function payMsg(r){return 'গোল অ্যারেনা - নতুন র
 function payHref(r){return S.wa?'https://wa.me/'+waNum(S.wa)+'?text='+encodeURIComponent(payMsg(r)):'#'}
 function payUp(){const r=S.regs.find(x=>x.id===payId);r.trx=$('tx').value.trim();save();$('pa').href=payHref(r)}
 function saveTrx(){const r=S.regs.find(x=>x.id===payId);r.trx=$('tx').value.trim();save();if(!S.wa){alert('অ্যাডমিনের হোয়াটসঅ্যাপ নম্বর পাওয়া যায়নি। অ্যাডমিনকে সরাসরি জানান।');return false}setTimeout(()=>go('reg'),400);return true}
-function shareLink(){const d={name:S.name,fee:S.fee,bk:S.bk,ng:S.ng,wa:S.wa,open:S.open,showPh:S.showPh,regs:S.regs.filter(r=>r.ok).map(r=>({id:r.id,name:r.name,uid:r.uid,phone:S.showPh?r.phone:'',ok:true})),bracket:S.bracket};return location.href.split('#')[0]+'#d='+btoa(unescape(encodeURIComponent(JSON.stringify(d))))}
+function shareLink(){const d={name:S.name,fee:S.fee,bk:S.bk,ng:S.ng,wa:S.wa,open:S.open,showPh:S.showPh,regs:S.regs.filter(r=>r.ok).map(r=>({id:r.id,name:r.name,uid:r.uid,phone:S.showPh?r.phone:'',ok:true})),bracket:S.bracket};return SITE+'#d='+btoa(unescape(encodeURIComponent(JSON.stringify(d))))}
 function cpLink(){const v=$('lk').value;try{navigator.clipboard.writeText(v).then(()=>alert('লিংক কপি হয়েছে'),()=>{$('lk').select()})}catch(e){$('lk').select()}}
 function pasteAdd(){const t=$('pm').value;const g=k=>{const m=t.match(new RegExp(k+'\\s*[:：]\\s*([^\\n]+)'));return m?m[1].trim():''};const n=g('নাম'),u=g('আইডি'),p=g('নম্বর'),x=g('TrxID');if(!n||!u){alert('মেসেজে নাম ও আইডি পাওয়া যায়নি');return}if(S.regs.some(r=>r.name.toLowerCase()===n.toLowerCase())){alert('এই নামে আগেই আছে');return}S.regs.push({id:Date.now(),name:n,uid:u,phone:p,trx:x,ok:false});save();render()}
 function waNum(p){p=String(p).replace(/\D/g,'');if(p.startsWith('880'))return p;if(p.startsWith('0'))return '88'+p;if(p.length===10&&p[0]==='1')return '880'+p;return p}
@@ -140,9 +142,10 @@ function vAdmin(){
  ${S.pts.slice().reverse().map(x=>`<div class="row"><span>ম্যাচ ${x.m} · ${esc(x.team)} · #${x.place} · ${x.kills} কিল = <b>${x.pts}</b></span><button class="btn s r" onclick="delPts(${x.id})">✕</button></div>`).join('')}</div>`;
  return h+`<div class="card"><h2>নিরাপত্তা</h2><input id="np" placeholder="নতুন পিন"><button class="btn o" onclick="chPin()">পিন বদলান</button> <button class="btn r" onclick="resetAll()">সব মুছুন</button> <button class="btn o" onclick="admin=false;render()">লগআউট</button></div>`}
 
-function render(){
+function canAdm(){return ADMIN_BUILD}
+function render(){if(tab==='adm'&&!canAdm())tab='reg';
  $('ttl').textContent='⚽ '+S.name+' ⚽';$('sub').textContent='eFootball · নক-আউট';
- $('nav').innerHTML=[['reg','রেজিস্ট্রেশন'],['main','ম্যাচ তালিকা'],['adm','অ্যাডমিন']].map(([k,l])=>`<button class="${tab===k||(k==='reg'&&tab==='pay')?'on':''}" onclick="go('${k}')">${l}</button>`).join('');
+ $('nav').innerHTML=[['reg','রেজিস্ট্রেশন'],['main','ম্যাচ তালিকা']].concat(canAdm()?[['adm','অ্যাডমিন']]:[]).map(([k,l])=>`<button class="${tab===k||(k==='reg'&&tab==='pay')?'on':''}" onclick="go('${k}')">${l}</button>`).join('');
  $('app').innerHTML=(tab==='reg'?vReg():tab==='pay'?vPay():tab==='main'?vMain():vAdmin())+(tab==='main'?helpBox():'')}
 render();
 </script>
